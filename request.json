@@ -1,0 +1,14 @@
+{
+    "url": "https://anifan.com.br/",
+    "script": null,
+    "config": {
+        "bypassCSP": null,
+        "useRandomAgent": null, 
+        "urlProxy": null,
+        "skipImage": null,
+        "logConsole": true,
+        "defaultNavigationTimeout": null,        
+        "addScriptTagUrl": null,
+        "waitTime": null
+    }
+}
