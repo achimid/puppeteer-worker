@@ -9,11 +9,12 @@ const log = {
 
 
 const execute = async (requestExec) => {            
-    const { url, script, config } = requestExec
+    const { url, script, config, ref } = requestExec
     
     log.info('Iniciando execução')
 
     const exec = {
+        ref,
         uuid: v4(),
         startTime: new Date()
     }

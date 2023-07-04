@@ -34,7 +34,6 @@ const onError = (request) => (error) => {
 
 
 
-
 module.exports = {
     initConsumer,
     finishExecution

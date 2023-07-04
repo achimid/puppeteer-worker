@@ -1,6 +1,7 @@
 {
+    "ref": "123456",
     "url": "https://anifan.com.br/",
-    "script": null,
+    "script": "s",
     "config": {
         "bypassCSP": null,
         "useRandomAgent": null, 
