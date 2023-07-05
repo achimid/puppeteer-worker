@@ -8,15 +8,21 @@ const finishExecution = (data) => sendToQueue('WORKER_EXECUTION_RESPONSE', data)
 const initConsumer = () => consumeFromQueue('WORKER_EXECUTION_REQUEST', onMessage)
 
 const onMessage =  (data, ack) => {
+    
+    parse(data)
+        .then(scraper.execute)
+        .then(onSuccess(data))
+        .catch(onError(data))
+        .finally(ack)
+}
+
+const parse = async (data) => {
     let content = data.content.toString()
     let request = JSON.parse(content)
 
     console.log(`Recieved: ${content}`)
 
-    scraper.execute(request)
-        .then(onSuccess(data))
-        .catch(onError(request))
-        .finally(ack)
+    return request
 }
 
 const onSuccess = (data) => (execution) => {
@@ -24,8 +30,8 @@ const onSuccess = (data) => (execution) => {
     finishExecution(execution)
 }
 
-const onError = (request) => (error) => {
-    const errData = { error, request }
+const onError = (data) => (error) => {
+    const errData = { error, request: JSON.parse(data.content.toString())}
 
     dlqExecution(errData)
 
