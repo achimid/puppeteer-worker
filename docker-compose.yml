@@ -10,3 +10,12 @@ services:
     ports:
       - "5672:5672"
       - "15672:15672"
+  executor:
+    image: achimid/puppeteer-executor
+    container_name: puppeteer-executor
+    environment:
+      - RABBITMQ_HOST=192.168.0.102
+      - RABBITMQ_USERNAME=i-wanna-be-notified
+      - RABBITMQ_PASSWORD=Cloco-sama!@12      
+    ports:
+      - "8080:8080"

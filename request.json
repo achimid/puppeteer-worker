@@ -1,7 +1,6 @@
-{
-    "ref": "123456",
+{    
     "url": "https://anifan.com.br/",
-    "script": "s",
+    "script": "JSON.stringify({url: document.querySelector('a').href})",
     "config": {
         "bypassCSP": null,
         "useRandomAgent": null, 
@@ -11,5 +10,7 @@
         "defaultNavigationTimeout": null,        
         "addScriptTagUrl": null,
         "waitTime": null
-    }
+    },
+    "ref": "123456",
+    "callbackUrl": ""
 }
