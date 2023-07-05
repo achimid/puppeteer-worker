@@ -1,0 +1,26 @@
+{
+    "request": {
+      "url": "https://anifan.com.br/",
+      "script": "JSON.stringify({url: document.querySelector('a').href})",
+      "config": {
+        "bypassCSP": null,
+        "useRandomAgent": null,
+        "urlProxy": null,
+        "skipImage": null,
+        "logConsole": true,
+        "defaultNavigationTimeout": null,
+        "addScriptTagUrl": null,
+        "waitTime": null
+      },
+      "ref": "123456",
+      "callbackUrl": ""
+    },
+    "execution": {
+        "uuid": "77b755af-dafd-4003-94fa-856429292709",
+        "startTime": "2023-07-05T14:18:12.312Z",
+        "result": "{\"url\":\"https://anifan.com.br/api/v1/auth/google\"}",
+        "isSuccess": true,
+        "endTime": "2023-07-05T14:18:12.524Z",
+        "executionTime": "212ms"
+    }
+  }
