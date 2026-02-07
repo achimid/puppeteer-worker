@@ -1,10 +1,8 @@
 // const cron = require('node-cron')
 const puppeteer = require('puppeteer-extra')  
 const stealthPlugin = require('puppeteer-extra-plugin-stealth')
-const adblockerPlugin = require('puppeteer-extra-plugin-adblocker')
 
 puppeteer.use(stealthPlugin())
-puppeteer.use(adblockerPlugin({ blockTrackers: true }))
 
 const proxy = process.env.PROXY_SERVER
 
