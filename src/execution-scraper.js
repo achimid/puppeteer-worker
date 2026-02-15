@@ -79,11 +79,15 @@ const execute = async (requestExec) => {
             log.info('Adding script tag')
             await page.addScriptTag({ url: config.addScriptTagUrl })
         }
-    
+        
+        if (config?.disableJavaScript == true) {
+            console.log('Desabilitando o JavaScript')
+            await page.setJavaScriptEnabled(false);
+        }
+        
 
         console.log('Navegando para url', url)
         await page.goto(url)
-
 
 
         if (!!config?.waitTime) {

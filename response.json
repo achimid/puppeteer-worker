@@ -10,7 +10,8 @@
         "logConsole": true,
         "defaultNavigationTimeout": null,
         "addScriptTagUrl": null,
-        "waitTime": null
+        "waitTime": null,
+        "disableJavaScript": null
       },
       "ref": "123456",
       "callbackUrl": ""
